@@ -8,6 +8,13 @@ https://docs.djangoproject.com/en/{{ docs_version }}/howto/deployment/asgi/
 """
 
 import os
+from pathlib import Path
+
+from django.conf import settings
+from dotenv import load_dotenv
+
+env_path = Path(settings.BASE_DIR)
+load_dotenv(dotenv_path=env_path)
 
 from django.core.asgi import get_asgi_application
 
