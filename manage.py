@@ -2,6 +2,13 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+from pathlib import Path
+
+from django.conf import settings
+from dotenv import load_dotenv
+
+env_path = Path(settings.BASE_DIR)
+load_dotenv(dotenv_path=env_path)
 
 
 def main():
